@@ -292,6 +292,11 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 420728990}
   m_CullTransparentMesh: 0
+--- !u!1 &723845469 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1914319539712122, guid: 252b38e91c2e847e3ba4b77f1b897182,
+    type: 2}
+  m_PrefabInternal: {fileID: 810217221}
 --- !u!1001 &810217221
 Prefab:
   m_ObjectHideFlags: 0
@@ -389,6 +394,26 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114105842552829272, guid: 252b38e91c2e847e3ba4b77f1b897182,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0.7076807
+      objectReference: {fileID: 0}
+    - target: {fileID: 114105842552829272, guid: 252b38e91c2e847e3ba4b77f1b897182,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.7747695
+      objectReference: {fileID: 0}
+    - target: {fileID: 114105842552829272, guid: 252b38e91c2e847e3ba4b77f1b897182,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.8773585
+      objectReference: {fileID: 0}
+    - target: {fileID: 114105842552829272, guid: 252b38e91c2e847e3ba4b77f1b897182,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 252b38e91c2e847e3ba4b77f1b897182, type: 2}
   m_IsPrefabAsset: 0
@@ -442,6 +467,7 @@ GameObject:
   - component: {fileID: 892476416}
   - component: {fileID: 892476415}
   - component: {fileID: 892476414}
+  - component: {fileID: 892476417}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -526,6 +552,20 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &892476417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 892476412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 849ef9c80b04d4fc992e6cfd9e2b0ef7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  question: {fileID: 420728992}
+  answerArea: {fileID: 2078272649}
+  buttonAnswer: {fileID: 723845469}
 --- !u!1 &1319027177
 GameObject:
   m_ObjectHideFlags: 0
@@ -714,7 +754,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.18459783, g: 0.15824135, b: 0.26415092, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\ExitGame.cs" />
+    <Compile Include="Assets\Scripts\GameplayManager.cs" />
     <Compile Include="Assets\Scripts\OpenInitScreen.cs" />
     <Compile Include="Assets\Scripts\OpenPlayScreen.cs" />
     <Reference Include="UnityEditor.StandardEvents">
