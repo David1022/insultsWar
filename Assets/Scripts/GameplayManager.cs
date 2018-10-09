@@ -18,7 +18,7 @@ public class GameplayManager : MonoBehaviour {
 
     private void fillAnswerArea() {
         float height = -100;
-        for (int i = 0; i < 7; i++) {
+        for (int i = 0; i < 10; i++) {
             GameObject newButton = Instantiate(buttonAnswer);
             newButton.transform.parent = answerArea;
 
@@ -30,7 +30,7 @@ public class GameplayManager : MonoBehaviour {
             newButton.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, height);
             newButton.GetComponent<Image>().enabled = true;
             newButton.GetComponent<Button>().enabled = true;
-
+            
             newButton.GetComponentInChildren<Text>().text = "Esto es un botón de prueba";
             newButton.GetComponentInChildren<Text>().enabled = true;
             height -= 120;
