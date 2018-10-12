@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.IO;
 
 public class GameplayManager : MonoBehaviour
 {
@@ -20,7 +21,7 @@ public class GameplayManager : MonoBehaviour
     public Transform answerArea;
     public GameObject buttonAnswer;
 
-    public Data inputData;
+    public InputData inputData;
     public Question currentQuestion;
     public List<Question> questions;
     public int rightAnswers;
@@ -29,7 +30,6 @@ public class GameplayManager : MonoBehaviour
     void Start()
     {
         initData();
-        readInputData();
         fillQuestionArea();
         fillAnswerArea();
     }
@@ -41,13 +41,7 @@ public class GameplayManager : MonoBehaviour
         currentPlayer = Player.P1;
         playerText.text = PLAYER1;
         playerImage.color = colorPlayer1;
-    }
-
-    private void readInputData()
-    {
-        TextAsset data = Resources.Load<TextAsset>("InputData");
-        inputData = JsonUtility.FromJson<Data>(data.ToString());
-        questions = inputData.data;
+        questions = SaveLoad.Load();
     }
 
     private void fillQuestionArea()
@@ -100,19 +94,36 @@ public class GameplayManager : MonoBehaviour
 
             if (player1Wins())
             {
-                OpenFinalScreen.LaunchPlayScreen();
+                saveWinnerAndOpenNextScreen(Player.P1);
             }
             else if (player2Wins())
             {
-                OpenFinalScreen.LaunchPlayScreen();
+                saveWinnerAndOpenNextScreen(Player.P2);
+            } else {
+                fillQuestionArea();
             }
         }
         else
         {
             changePlayer();
+            fillQuestionArea();
+        }
+    }
+
+    private void saveWinnerAndOpenNextScreen(Player winner)
+    {
+        string winnerName = "";
+        if (winner.Equals(Player.P1))
+        {
+            winnerName = "Player 1";
+        }
+        else
+        {
+            winnerName = "Player 2";
         }
 
-        fillQuestionArea();
+        SaveLoad.Save(winnerName);
+        OpenFinalScreen.LaunchPlayScreen();
     }
 
     private void changePlayer()

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 
 [System.Serializable]
-public class Data
+public class InputData
 {
     public List<Question> data;
 }

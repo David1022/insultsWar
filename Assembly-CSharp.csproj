@@ -61,12 +61,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Data.cs" />
     <Compile Include="Assets\Scripts\ExitGame.cs" />
+    <Compile Include="Assets\Scripts\FinalManager.cs" />
     <Compile Include="Assets\Scripts\GameplayManager.cs" />
+    <Compile Include="Assets\Scripts\InputData.cs" />
     <Compile Include="Assets\Scripts\OpenFinalScreen.cs" />
     <Compile Include="Assets\Scripts\OpenInitScreen.cs" />
     <Compile Include="Assets\Scripts\OpenPlayScreen.cs" />
+    <Compile Include="Assets\Scripts\OutputData.cs" />
+    <Compile Include="Assets\Scripts\SaveLoad.cs" />
+    <None Include="Assets\Resources\OutputData.txt" />
+    <None Include="Assets\OutputData.txt" />
     <None Include="Assets\Resources\InputData.txt" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>/Users/davidmendano/Unity/insultsWar/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
