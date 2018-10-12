@@ -1,0 +1,65 @@
+{
+ "data":
+    [
+        {
+        "question": "¿Has dejado ya de usar pañales?",
+        "answer": "¿Por qué? ¿Acaso querías pedir uno prestado?"
+        },
+        {
+        "question": "¡No hay palabras para describir lo asqueroso que eres!",
+        "answer": "Sí que las hay, sólo que nunca las has aprendido"
+        },
+        {
+        "question": "¡He hablado con simios más educados que tu!",
+        "answer": "Me alegra que asistieras a tu reunión familiar diaria"
+        },
+        {
+        "question": "¡Llevarás mi espada como si fueras un pincho moruno!",
+        "answer": "Primero deberías dejar de usarla como un plumero"
+        },
+        {
+        "question": "¡Ordeñaré hasta la última gota de sangre de tu cuerpo!",
+        "answer": "Qué apropiado, tú peleas como una vaca"
+        },
+        {
+        "question": "¡Eres como un dolor en la parte baja de la espalda!",
+        "answer": "Ya te están fastidiando otra vez las almorranas, ¿Eh?"
+        },
+        {
+        "question": "¡Mi pañuelo limpiará tu sangre!",
+        "answer": "Ah, ¿Ya has obtenido ese trabajo de barrendero?"
+        },
+        {
+        "question": "¡Una vez tuve un perro más listo que tu!",
+        "answer": "Te habrá enseñado todo lo que sabes"
+        },
+        {
+        "question": "Nunca me verán luchar tan mal como tú lo haces",
+        "answer": "¿Tan rápido corres?"
+        },
+        {
+        "question": "Si tu hermano es como tú, mejor casarse con un cerdo",
+        "answer": "Me haces pensar que alguien ya lo ha hecho"
+        },
+        {
+        "question": "Cada palabra que sale de tu boca es una estupidez",
+        "answer": "Quería asegurarme de que estuvieras a gusto conmigo"
+        },
+        {
+        "question": "¡He oído que eres un soplón despreciable!",
+        "answer": "Qué pena me da que nadie haya oído hablar de ti"
+        },
+        {
+        "question": "¡La gente cae a mis pies al verme llegar!",
+        "answer": "¿Incluso antes de que huelan tu aliento?"
+        },
+        {
+        "question": "¡Demasiado bobo para mi nivel de inteligencia!",
+        "answer": "Estaría acabado si la usases alguna vez"
+        },
+        {
+        "question": "Mi ultima pelea acabo con mis manos llenas de sangre",
+        "answer": "Espero que ya hayas aprendido a no tocarte la nariz"
+        }
+    ]
+}
