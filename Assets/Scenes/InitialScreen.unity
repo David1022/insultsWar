@@ -248,6 +248,11 @@ Prefab:
       propertyPath: m_Name
       value: NewGameText
       objectReference: {fileID: 0}
+    - target: {fileID: 114057459972698408, guid: 01eddb6aaeac24c0eb690963fb435c65,
+        type: 2}
+      propertyPath: m_Text
+      value: NUEVO JUEGO
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01eddb6aaeac24c0eb690963fb435c65, type: 2}
   m_IsPrefabAsset: 0
@@ -364,7 +369,7 @@ Prefab:
     - target: {fileID: 114057459972698408, guid: 01eddb6aaeac24c0eb690963fb435c65,
         type: 2}
       propertyPath: m_Text
-      value: EXIT
+      value: SALIR
       objectReference: {fileID: 0}
     - target: {fileID: 114409962804023702, guid: 01eddb6aaeac24c0eb690963fb435c65,
         type: 2}

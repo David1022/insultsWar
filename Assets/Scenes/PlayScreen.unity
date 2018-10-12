@@ -995,6 +995,7 @@ MonoBehaviour:
   playerText: {fileID: 1914390954}
   rightAnswersText: {fileID: 1036119016}
   playerImage: {fileID: 257854036}
+  scoreImage: {fileID: 1980701088}
   answerArea: {fileID: 2078272649}
   buttonAnswer: {fileID: 723845469}
   inputData:
@@ -1038,7 +1039,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 150, y: 50}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &1036119016
 MonoBehaviour:
@@ -1072,7 +1073,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Right Answers: 3'
+  m_Text: 'Correctass: 3'
 --- !u!222 &1036119017
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1195,6 +1196,11 @@ Prefab:
         type: 2}
       propertyPath: m_Color.b
       value: 0.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 114729965466798048, guid: b9aca7369481d4c8894724e43759ef42,
+        type: 2}
+      propertyPath: m_Text
+      value: JUGADOR s1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
@@ -1922,7 +1928,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0.688}
   m_AnchorMax: {x: 1, y: 0.688}
   m_AnchoredPosition: {x: -30, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 150, y: 50}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &1980701088
 MonoBehaviour:

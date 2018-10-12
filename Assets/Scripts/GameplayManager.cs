@@ -7,17 +7,21 @@ public class GameplayManager : MonoBehaviour
     const int RIGHT_ANSWERS_TO_WIN = 3;
 
     public enum Player { P1, P2 };
-    const string PLAYER1 = "Player 1";
-    const string PLAYER2 = "Player 2";
-    const string RIGHT_ANSWERS_TEXT = "Right Answer: ";
+    const string PLAYER1 = "Jugador 1";
+    const string PLAYER2 = "Jugador 2";
+    const string RIGHT_ANSWERS_TEXT = "Correctas: ";
 
     Color colorPlayer1 = new Color(0f, 0.5f, 0.17f);
     Color colorPlayer2 = new Color(0.9f, 0.55f, 0f);
+    Color colorScoreBlue = new Color(0.26f, 0.18f, 0.56f);
+    Color colorScoreOrange = new Color(0.9f, 0.55f, 0f);
+    Color colorScoreRed = Color.red;
 
     public Text questionText;
     public Text playerText;
     public Text rightAnswersText;
     public Image playerImage;
+    public Image scoreImage;
     public Transform answerArea;
     public GameObject buttonAnswer;
 
@@ -38,12 +42,25 @@ public class GameplayManager : MonoBehaviour
     private void InitData()
     {
         rightAnswers = 0;
-        rightAnswersText.text = RIGHT_ANSWERS_TEXT + rightAnswers;
+        UpdateScore();
         questions.Clear();
         currentPlayer = Player.P1;
         playerText.text = PLAYER1;
         playerImage.color = colorPlayer1;
         questions = SaveLoad.Load();
+    }
+
+    private void UpdateScore()
+    {
+        rightAnswersText.text = RIGHT_ANSWERS_TEXT + rightAnswers;
+        if (rightAnswers == 0)
+        {
+            scoreImage.color = colorScoreRed;
+        } else if (rightAnswers == 1){
+            scoreImage.color = colorScoreOrange;
+        } else {
+            scoreImage.color = colorScoreBlue;
+        }
     }
 
     private void FillQuestionArea()
@@ -102,14 +119,14 @@ public class GameplayManager : MonoBehaviour
             {
                 saveWinnerAndOpenNextScreen(Player.P2);
             } else {
-                rightAnswersText.text = RIGHT_ANSWERS_TEXT + rightAnswers;
+                UpdateScore();
                 FillQuestionArea();
             }
         }
         else
         {
             changePlayer();
-            rightAnswersText.text = RIGHT_ANSWERS_TEXT + rightAnswers;
+            UpdateScore();
             FillQuestionArea();
         }
     }
@@ -119,11 +136,11 @@ public class GameplayManager : MonoBehaviour
         string winnerName = "";
         if (winner.Equals(Player.P1))
         {
-            winnerName = "Player 1";
+            winnerName = PLAYER1;
         }
         else
         {
-            winnerName = "Player 2";
+            winnerName = PLAYER2;
         }
 
         SaveLoad.Save(winnerName);
@@ -145,6 +162,7 @@ public class GameplayManager : MonoBehaviour
             playerImage.color = colorPlayer1;
         }
         rightAnswers = 0;
+        UpdateScore();
     }
 
     private bool isRightAnswer(Question question)

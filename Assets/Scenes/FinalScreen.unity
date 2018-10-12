@@ -458,7 +458,7 @@ Prefab:
     - target: {fileID: 114057459972698408, guid: 01eddb6aaeac24c0eb690963fb435c65,
         type: 2}
       propertyPath: m_Text
-      value: QUIT
+      value: SALIR
       objectReference: {fileID: 0}
     - target: {fileID: 1457073760818624, guid: 01eddb6aaeac24c0eb690963fb435c65, type: 2}
       propertyPath: m_Name
@@ -626,7 +626,7 @@ Prefab:
     - target: {fileID: 114057459972698408, guid: 01eddb6aaeac24c0eb690963fb435c65,
         type: 2}
       propertyPath: m_Text
-      value: INIT
+      value: MENU INICIO
       objectReference: {fileID: 0}
     - target: {fileID: 114409962804023702, guid: 01eddb6aaeac24c0eb690963fb435c65,
         type: 2}
@@ -879,7 +879,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 100
+    m_FontSize: 70
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -890,7 +890,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: YOU WIN
+  m_Text: GANSTE!!
 --- !u!222 &1502847243
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1011,7 +1011,7 @@ Prefab:
     - target: {fileID: 114057459972698408, guid: 01eddb6aaeac24c0eb690963fb435c65,
         type: 2}
       propertyPath: m_Text
-      value: PLAY AGAIN
+      value: VOLVER A JUGAR
       objectReference: {fileID: 0}
     - target: {fileID: 114409962804023702, guid: 01eddb6aaeac24c0eb690963fb435c65,
         type: 2}

@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class FinalManager : MonoBehaviour {
 
     static OutputData outputData;
+    static string WINS = " gana!!";
 
     public Text winnerText;
 
@@ -23,7 +24,7 @@ public class FinalManager : MonoBehaviour {
         outputData = JsonUtility.FromJson<OutputData>(data.ToString());
         string winner = outputData.winner;
 
-        winnerText.text = winner + " wins!!";
+        winnerText.text = winner + WINS;
     }
 
     void Update () {
