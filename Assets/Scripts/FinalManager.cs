@@ -11,7 +11,6 @@ public class FinalManager : MonoBehaviour {
 
     public Text winnerText;
 
-    // Use this for initialization
     void Start () {
         readWinner();
     }
@@ -27,7 +26,6 @@ public class FinalManager : MonoBehaviour {
         winnerText.text = winner + " wins!!";
     }
 
-    // Update is called once per frame
     void Update () {
 		
 	}

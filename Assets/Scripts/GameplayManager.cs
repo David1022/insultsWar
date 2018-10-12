@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using System.IO;
 
 public class GameplayManager : MonoBehaviour
 {
-    const int RIGHT_ANSWERS_TO_WIN = 1;
+    const int RIGHT_ANSWERS_TO_WIN = 3;
 
     public enum Player { P1, P2 };
     const string PLAYER1 = "Player 1";
@@ -47,7 +45,7 @@ public class GameplayManager : MonoBehaviour
     private void fillQuestionArea()
     {
         System.Random rnd = new System.Random();
-        int random = rnd.Next(0, (questions.Count + 1));
+        int random = rnd.Next(0, (questions.Count));
         currentQuestion = questions[random];
         questionText.text = currentQuestion.question;
     }
@@ -173,7 +171,6 @@ public class GameplayManager : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
 
