@@ -12,10 +12,10 @@ public class FinalManager : MonoBehaviour {
     public Text winnerText;
 
     void Start () {
-        readWinner();
+        ReadWinner();
     }
 
-    public void readWinner()
+    public void ReadWinner()
     {
         AssetDatabase.ImportAsset(SaveLoad.OUTPUT_PATH);
 

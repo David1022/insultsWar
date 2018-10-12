@@ -9,12 +9,14 @@ public class GameplayManager : MonoBehaviour
     public enum Player { P1, P2 };
     const string PLAYER1 = "Player 1";
     const string PLAYER2 = "Player 2";
+    const string RIGHT_ANSWERS_TEXT = "Right Answer: ";
 
     Color colorPlayer1 = new Color(0f, 0.5f, 0.17f);
     Color colorPlayer2 = new Color(0.9f, 0.55f, 0f);
 
     public Text questionText;
     public Text playerText;
+    public Text rightAnswersText;
     public Image playerImage;
     public Transform answerArea;
     public GameObject buttonAnswer;
@@ -25,16 +27,18 @@ public class GameplayManager : MonoBehaviour
     public int rightAnswers;
     public Player currentPlayer;
 
+
     void Start()
     {
-        initData();
-        fillQuestionArea();
-        fillAnswerArea();
+        InitData();
+        FillQuestionArea();
+        FillAnswerArea();
     }
 
-    private void initData()
+    private void InitData()
     {
         rightAnswers = 0;
+        rightAnswersText.text = RIGHT_ANSWERS_TEXT + rightAnswers;
         questions.Clear();
         currentPlayer = Player.P1;
         playerText.text = PLAYER1;
@@ -42,7 +46,7 @@ public class GameplayManager : MonoBehaviour
         questions = SaveLoad.Load();
     }
 
-    private void fillQuestionArea()
+    private void FillQuestionArea()
     {
         System.Random rnd = new System.Random();
         int random = rnd.Next(0, (questions.Count));
@@ -50,7 +54,7 @@ public class GameplayManager : MonoBehaviour
         questionText.text = currentQuestion.question;
     }
 
-    private void fillAnswerArea()
+    private void FillAnswerArea()
     {
         cleanAnswerArea();
         float height = -100;
@@ -98,13 +102,15 @@ public class GameplayManager : MonoBehaviour
             {
                 saveWinnerAndOpenNextScreen(Player.P2);
             } else {
-                fillQuestionArea();
+                rightAnswersText.text = RIGHT_ANSWERS_TEXT + rightAnswers;
+                FillQuestionArea();
             }
         }
         else
         {
             changePlayer();
-            fillQuestionArea();
+            rightAnswersText.text = RIGHT_ANSWERS_TEXT + rightAnswers;
+            FillQuestionArea();
         }
     }
 
